@@ -1,0 +1,47 @@
+﻿@model TaxApp.Models.TaxCalculationViewModel
+
+@{
+    ViewData["Title"] = "Tax Calculation";
+}
+
+<h1>TaxCalculation</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="TaxCalculation">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PostalCode" class="control-label"></label>
+                <select asp-for="PostalCode" asp-items="ViewBag.PostalCodes"></select>
+                <span asp-validation-for="PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnnualIncome" class="control-label"></label>
+                <input asp-for="AnnualIncome" class="form-control" />
+                <span asp-validation-for="AnnualIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<p>
+    @{
+        if (Model != null)
+        {
+        <p>
+        <strong> Calculation Results : @Model.CalculationResult </strong>
+        </p>
+        }
+    }
+    
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

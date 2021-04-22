@@ -1,0 +1,12 @@
+C:\Users\emd0194\source\repos\DataLib\bin\Debug\net5.0\DataLib.deps.json
+C:\Users\emd0194\source\repos\DataLib\bin\Debug\net5.0\DataLib.dll
+C:\Users\emd0194\source\repos\DataLib\bin\Debug\net5.0\ref\DataLib.dll
+C:\Users\emd0194\source\repos\DataLib\bin\Debug\net5.0\DataLib.pdb
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.csprojAssemblyReference.cache
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.AssemblyInfoInputs.cache
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.AssemblyInfo.cs
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.csproj.CoreCompileInputs.cache
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.dll
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\ref\DataLib.dll
+C:\Users\emd0194\source\repos\DataLib\obj\Debug\net5.0\DataLib.pdb

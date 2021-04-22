@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TaxApp.Models.PostalCodeViewModel>
+
+@{
+    ViewData["Title"] = "List Postal Codes";
+}
+
+
+
+<!--<p>
+    <a asp-action="Create">Create New</a>
+</p>-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PostalCodeDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostalCodevalue)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalCodeDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalCodevalue)
+            </td>
+            <!--<td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>-->
+        </tr>
+        }
+    </tbody>
+</table>

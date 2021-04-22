@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[FlatRateTax]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Rate] DECIMAL(5, 2) NOT NULL
+)

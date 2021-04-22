@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[ProGressiveTax]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Rate] DECIMAL(5, 2) NOT NULL, 
+    [From] DECIMAL(16, 2) NOT NULL, 
+    [To] DECIMAL(16, 2) NOT NULL
+)

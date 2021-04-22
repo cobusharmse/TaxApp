@@ -1,0 +1,108 @@
+﻿@model IEnumerable<TaxApp.Models.TaxTableViewModel>
+
+@{
+    ViewData["Title"] = "List Of Tax Tables";
+}
+
+
+
+<!--<p>
+    <a asp-action="Create">Create New</a>
+</p>-->
+<h2>Progressive Tax</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rate)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.To)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.Type == "Progessive")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.From)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.To)
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<hr />
+<h2>Flat Value Tax</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinValue) (Rate applies for income below this value)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.Type == "FlatValue")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Value)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MinValue)
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<hr />
+<h2>Flat Rate Tax</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.Type == "FlatRate")
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                </tr>
+
+            }
+        }
+    </tbody>
+</table>
